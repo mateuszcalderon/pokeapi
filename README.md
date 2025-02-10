@@ -9,7 +9,7 @@
 This Python script enables users to retrieve detailed information about a Pokémon by its name using PokeAPI. After entering a Pokémon's name, the script sends a GET request to the API and presents details such as the Pokémon's name, abilities, types, and ID.
 
 ## Resources:
-My script was developed with guidance from the [Bro Code](https://www.youtube.com/watch?v=JVQNywo4AbU), whose tutorial helped in understanding how to interact with APIs in Python.
+My script was developed with guidance from [Bro Code](https://www.youtube.com/watch?v=JVQNywo4AbU), whose tutorial helped in understanding how to interact with APIs in Python.
 
 ## Code Walkthrough:
 #### Library:
@@ -17,15 +17,16 @@ My script was developed with guidance from the [Bro Code](https://www.youtube.co
   import requests
 ```
 
-  - ` requests `: Used for sending HTTP requests
+  - ` requests `: Used for sending HTTP requests.
 
 #### Base URL:
 ```python
   base_url = "https://pokeapi.co/api/v2/"
 ```
 
-  - Sets the base URL for the Pokémon API. Setting a base URL is a fundamental aspect when working with APIs
-  - The base URL is the starting point for all endpoints provided by the API. It defines the primary address used to request specific resources
+  - Sets the base URL for the Pokémon API. Setting a base URL is a fundamental aspect when working with APIs.
+  - **Important:**
+    - The base URL is the starting point for all endpoints provided by an API. It defines the primary address used to request specific resources.
 
 #### get_pokemon_info Function and Response Handling:
 ```python
@@ -40,21 +41,21 @@ My script was developed with guidance from the [Bro Code](https://www.youtube.co
         return
 ```
 
-  - **Purpose:** Fetches information about a Pokémon from the PokéAPI
+  - **Purpose:** Fetches information about a Pokémon from PokéAPI.
   - **How it works:**
-    - ` url = f"{base_url}pokemon/{name}" `: Constructs the full URL for the API request by appending the Pokémon name to the base URL
-    - ` response = requests.get(url) `: Sends an HTTP GET request to the constructed URL to fetch the Pokémon information
-    - ` if response.status_code == 200: `: Checks if the status code of the response is 200, which indicates a successful request
-    - ` pokemon_data = response.json() `: If the request is successful, the response is converted from JSON format to a Python dictionary and stored in the ` pokemon_data ` variable
-    - `return pokemon_data `: The function returns the ` pokemon_data ` dictionary, which contains the Pokémon information
-    - ` else: `: If the status code is not 200, the function prints an error message with the status code
+    - ` url = f"{base_url}pokemon/{name}" `: Constructs the full URL for the API request by appending the Pokémon name to the base URL.
+    - ` response = requests.get(url) `: Sends an HTTP GET request to the constructed URL to fetch the Pokémon information.
+    - ` if response.status_code == 200: `: Checks if the status code of the response is 200, which indicates a successful request.
+    - ` pokemon_data = response.json() `: If the request is successful, the response is converted from JSON format to a Python dictionary and stored in ` pokemon_data `.
+    - `return pokemon_data `: The function returns the ` pokemon_data ` dictionary, which contains the Pokémon information.
+    - ` else: `: If the status code is not 200, the function prints an error message with the status code.
 
 #### Fetching Pokémon Info:
 ```python
   pokemon_info = get_pokemon_info(pokemon_name)
 ```
 
-  - Fetches the Pokémon information using the ` get_pokemon_info ` function with the user-provided name
+  - Fetches the Pokémon information using the ` get_pokemon_info ` function with the user-provided name.
 
 #### Output:
 ```python
@@ -65,7 +66,7 @@ My script was developed with guidance from the [Bro Code](https://www.youtube.co
     print(f"ID: {pokemon_info['id']}")
 ```
 
-  - If the Pokémon info is successfully retrieved, prints the name, ability, type and ID
+  - If the Pokémon info is successfully retrieved, prints the name, ability, type and ID.
 
 ## Development Environment:
 This project was developed using the following tools and versions:
