@@ -6,7 +6,7 @@
   <h1>PokéAPI</h1>
 </div>
 
-This Python script enables users to retrieve detailed information about a Pokémon by its name using PokeAPI. After entering a Pokémon's name, the script sends a GET request to the API and presents details such as the Pokémon's name, abilities, types, and ID.
+This Python script enables users to retrieve detailed information about a Pokémon by its name using PokéAPI. After entering a Pokémon's name, the script sends a GET request to the API and presents details such as the Pokémon's name, abilities, types, and ID.
 
 ## Resources:
 My script was developed with guidance from [Bro Code](https://www.youtube.com/watch?v=JVQNywo4AbU), whose tutorial helped in understanding how to interact with APIs in Python.
@@ -66,7 +66,7 @@ My script was developed with guidance from [Bro Code](https://www.youtube.com/wa
     print(f"ID: {pokemon_info['id']}")
 ```
 
-  - If the Pokémon info is successfully retrieved, prints the name, ability, type and ID.
+  - If the Pokémon info is successfully retrieved, prints the name, abilities, types and ID.
 
 ## Development Environment:
 This project was developed using the following tools and versions:
